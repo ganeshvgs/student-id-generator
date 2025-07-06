@@ -1,7 +1,7 @@
-/* General Styles */
+/* style.css */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f1e4;
+  background-color: #f0f4f8;
   margin: 0;
   padding: 20px;
 }
@@ -14,114 +14,120 @@ body {
 }
 
 .id-card {
-  border: 2px solid #c0392b;
+  width: 320px;
+  border: 2px solid #333;
   border-radius: 10px;
-  padding: 15px;
-  width: 300px;
-  background-color: #fff7e6;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #fff;
 }
 
-.front, .back {
-  text-align: center;
-}
-
-h2 {
-  font-size: 20px;
-  color: #c0392b;
-}
-
-h3 {
-  font-size: 16px;
-  color: #7b241c;
-  margin-bottom: 10px;
-}
-
-.photo-box {
-  width: 120px;
-  height: 120px;
-  border: 2px dashed #7b241c;
-  border-radius: 50%;
-  margin: 0 auto 10px;
-  background-color: #f0e6d2;
-  background-size: cover;
-  background-position: center;
+.id-card .front, .id-card .back {
+  padding: 20px;
 }
 
 .logos {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
 
 .logo {
   width: 50px;
   height: 50px;
+  object-fit: contain;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  color: #222;
+}
+
+h3 {
+  text-align: center;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.photo-box {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 0 auto 10px auto;
+}
+
+p {
+  margin: 6px 0;
+  font-size: 14px;
 }
 
 .school-img {
   width: 100%;
+  margin-top: 15px;
   border-radius: 8px;
-  margin-top: 10px;
-}
-
-p {
-  font-size: 14px;
-  margin: 5px 0;
 }
 
 .form-section {
   width: 100%;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"],
-textarea,
-select {
-  padding: 8px;
-  border: 1px solid #c0392b;
-  border-radius: 5px;
-  background-color: #fff;
-  font-size: 14px;
+.form-section input, 
+.form-section select,
+.form-section textarea {
   width: 100%;
-}
-
-textarea {
-  resize: none;
-  height: 60px;
-}
-
-input[type="file"] {
-  border: none;
-}
-
-button {
   padding: 10px;
-  background-color: #c0392b;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-section button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
-button:hover {
-  background-color: #922b21;
+.form-section button:hover {
+  background: #0056b3;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Mobile Optimization */
+@media (max-width: 600px) {
   .container {
     flex-direction: column;
     align-items: center;
   }
 
-  .form-section {
-    max-width: 100%;
+  .id-card, .form-section {
+    width: 100%;
+  }
+
+  .photo-box {
+    width: 80px;
+    height: 80px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 13px;
   }
 }
