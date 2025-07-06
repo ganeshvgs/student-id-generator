@@ -1,27 +1,58 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background: #fff8e1;
-  text-align: center;
+  background-color: #f8f1e4;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .id-card {
-  border: 2px solid maroon;
-  width: 300px;
-  padding: 15px;
-  margin: 10px;
-  background: #fffbe7;
+  border: 2px solid #c0392b;
   border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  background-color: #fff7e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.front, .back {
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  color: #c0392b;
+}
+
+h3 {
+  font-size: 16px;
+  color: #7b241c;
+  margin-bottom: 10px;
+}
+
+.photo-box {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #7b241c;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  background-color: #f0e6d2;
+  background-size: cover;
+  background-position: center;
 }
 
 .logos {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .logo {
@@ -29,36 +60,68 @@ body {
   height: 50px;
 }
 
-.photo-box {
-  width: 100px;
-  height: 100px;
-  border: 2px solid #000;
-  margin: 10px auto;
-  background-color: #ccc;
-}
-
 .school-img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 .form-section {
-  margin-top: 20px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-input, textarea {
-  display: block;
-  margin: 8px auto;
+input[type="text"],
+textarea,
+select {
   padding: 8px;
-  width: 80%;
+  border: 1px solid #c0392b;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 60px;
+}
+
+input[type="file"] {
+  border: none;
 }
 
 button {
-  padding: 10px 15px;
-  margin: 10px 5px;
-  background-color: maroon;
-  color: white;
+  padding: 10px;
+  background-color: #c0392b;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #922b21;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section {
+    max-width: 100%;
+  }
 }
