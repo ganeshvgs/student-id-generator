@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student ID Card Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- FRONT SIDE -->
+    <div class="id-card" id="idCardFront">
+      <div class="front">
+        <div class="logos">
+          <img src="images/logo.jpg" class="logo" />
+          <img src="images/karn.png" class="logo" />
+        </div>
+        <h2>Shri Mookambika Temple High School</h2>
+        <h3>ಧಾರ್ಮಿಕ ದತ್ತಿ ಇಲಾಖೆ</h3>
+        <div class="photo-box" id="photoPreview"></div>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Roll No:</strong> <span id="displayRoll"></span></p>
+        <p><strong>Class:</strong> <span id="displayClass"></span></p>
+      </div>
+    </div>
+
+    <!-- BACK SIDE -->
+    <div class="id-card" id="idCardBack">
+      <div class="back">
+        <p><strong>Father’s Name:</strong> <span id="displayFather"></span></p>
+        <p><strong>Mother’s Name:</strong> <span id="displayMother"></span></p>
+        <p><strong>Mobile:</strong> <span id="displayMobile"></span></p>
+        <p><strong>Blood Group:</strong> <span id="displayBlood"></span></p>
+        <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+        <img src="images/building.jpg" class="school-img" />
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-section">
+      <input type="text" placeholder="Student Name" id="name" />
+      <input type="text" placeholder="Roll No" id="roll" />
+      <input type="text" placeholder="Class" id="class" />
+      <input type="text" placeholder="Father's Name" id="father" />
+      <input type="text" placeholder="Mother's Name" id="mother" />
+      <input type="text" placeholder="Mobile Number" id="mobile" />
+      <input type="text" placeholder="Blood Group" id="blood" />
+      <textarea placeholder="Address" id="address"></textarea>
+      <input type="file" id="photoInput" />
+      <button onclick="generateID()">Generate ID</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
